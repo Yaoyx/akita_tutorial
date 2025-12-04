@@ -1,0 +1,26 @@
+{
+  "name": "Akita Tutorial Environment",
+  // Use the official Miniconda image (Best for 'conda install' commands)
+  "image": "mcr.microsoft.com/devcontainers/miniconda:3",
+  
+  // Enable GPU driver
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "installCudnn": true
+    }
+  },
+
+  "postCreateCommand": "conda install -n base -c bioconda -c conda-forge cooltools python=3.10 -y && pip install 'tensorflow[and-cuda]==2.14.0' pysam IPython ipykernel && if [ ! -d 'akita_tutorial' ]; then git clone https://github.com/Yaoyx/akita_tutorial.git; fi && pip install -e akita_tutorial --no-deps",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}

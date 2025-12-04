@@ -4,9 +4,10 @@
 
 ## Instruction
 1. Click the "Open in GitHub Codespaces" link above to create a Codespace. (Student accounts get free hours per month.)
-2. Wait until the setup is complete, including the post-command that installs the required Python packages.
-3. Open the `Akita_tutorial.ipynb` notebook and enjoy the tutorial!
-4. At the end, remember to click **Codespaces** at the bottom left. A menu will appear at the top of the window; click **Stop Current Codespace**.
+2. Select `Yaoyx/akita_tutorial` for the Repository and `4-core` for the Machine type.
+3. Wait until the setup is complete (look for the 'Running postCreateCommand...' message at the bottom of the window)
+4. Open the `Akita_tutorial.ipynb` notebook and select kernel 'python 3.10.19'.
+5. At the end, remember to click **Codespaces** at the bottom left. A menu will appear at the top of the window; click **Stop Current Codespace**.
 
 
 

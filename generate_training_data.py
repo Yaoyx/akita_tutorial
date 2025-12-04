@@ -86,21 +86,12 @@ def main():
         "valid_seqs": seqs_per_tfr * num_validation_batch,
         "test_seqs": seqs_per_tfr * num_test_batch
     }
-    statistics_path = "/content/akita_tutorial/tutorial_materials/training_materials/statistics.json"
+    statistics_path = "./tutorial_materials/training_materials/statistics.json"
     with open(statistics_path, "w") as file:
         json.dump(sequence_stats, file, indent=4)
 
-    # params_path = '/content/akita_tutorial/tutorial_materials/training_materials/params.json'
-    # with open(params_path, 'r') as file:
-    #     params = json.load(file)
-    # params['model']['seq_length'] = seq_length
-    # params['model']['target_length'] = int(seq_length / bin_size)
-    # params['model']['trunk'][1]["repeat"] = int(np.log2(bin_size) - 1)
-    # with open(params_path, 'w') as file:
-    #     json.dump(params, file, indent=4)
 
-
-    out_dir = '/content/akita_tutorial/tutorial_materials/training_materials/tfrecords'
+    out_dir = './tutorial_materials/training_materials/tfrecords'
     if not os.path.isdir(out_dir):
         os.mkdir(out_dir)
 

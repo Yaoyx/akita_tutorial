@@ -11,7 +11,7 @@
     }
   },
 
-  "postCreateCommand": "pip install --upgrade pip && pip install 'numpy<2' && pip install cooltools 'tensorflow[and-cuda]==2.14.0' pysam IPython ipykernel tqdm && pip install -e . --no-deps",
+  "postCreateCommand": "pip install --upgrade pip && pip install 'numpy<2' && pip install cooltools 'tensorflow[and-cuda]==2.14.0' pysam IPython ipykernel tqdm && pip install -e .",
   "customizations": {
     "vscode": {
       "settings": {
